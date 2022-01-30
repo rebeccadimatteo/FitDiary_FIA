@@ -17,6 +17,7 @@ public class Utente {
     }
 
     public Utente() {
+        listaReport=new ArrayList<>();
     }
 
     public long getId() {
@@ -63,7 +64,7 @@ public class Utente {
         nuovoUtente.setSesso(r.nextInt(2));
         nuovoUtente.setId(id);
         for (int i = 0; i < mesi; i++) {
-            nuovoUtente.AggiungiReport(Report.generaReport(nuovoUtente,i));
+            nuovoUtente.AggiungiReport(Report.generaReport(nuovoUtente,i+1));
 
         }
         return nuovoUtente;

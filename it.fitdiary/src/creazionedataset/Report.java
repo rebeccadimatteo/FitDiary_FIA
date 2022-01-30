@@ -62,9 +62,8 @@ public class Report {
         report.setMese(mese);
         report.setPeso(r.nextInt(50) + 60);
         int kcalDaAssumere = calcoloKcalDaAssumere(nuovoUtente, report.getPeso());
-        int kcalAssunte = Integer
-                .parseInt("" + (r.nextInt(4) > 2 ? kcalDaAssumere + (kcalDaAssumere * (r.nextInt(40) / 100))
-                        : kcalDaAssumere - (kcalDaAssumere * (r.nextInt(40) / 100))));
+        int kcalAssunte = (r.nextInt(4) > 2 ? kcalDaAssumere + ((kcalDaAssumere * r.nextInt(40)) / 100)
+                        : kcalDaAssumere - ((kcalDaAssumere * r.nextInt(40)) / 100));
         report.setKcal(kcalAssunte);
         report.setVariazionePesoStimato(calcolaPesoPerso(nuovoUtente, report.getKcal(), kcalDaAssumere));
         return report;
@@ -74,7 +73,6 @@ public class Report {
 
         double metabolismoBasale = 0;
         double livelloAttivitaFisica = 0;
-        Random r = new Random();
         double kcalDaAssumere = 0;
         if (utente.getSesso() == 0) {
             if (utente.getEta() >= 18 && utente.getEta() <= 29) {
@@ -106,7 +104,7 @@ public class Report {
 
     public static float calcolaPesoPerso(Utente utente, int kcal, int kcalDaAssumere) {
         Random peso = new Random();
-        return (peso.nextInt(4) + 2) * (1 - kcalDaAssumere / kcal);
+        return (peso.nextInt(4)+2)*(1-(((float)kcalDaAssumere) / kcal));
 
     }
 }
