@@ -1,6 +1,7 @@
 package creazionedataset;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Utente {
     private long id;
@@ -53,6 +54,25 @@ public class Utente {
     @Override
     public String toString() {
         return "Utente [eta=" + eta + ", id=" + id + ", listaReport=" + listaReport + ", sesso=" + sesso + "]";
+    }
+
+    public static Utente generaUtente(long id, int mesi) {
+        Utente nuovoUtente = new Utente();
+        Random r = new Random();
+        nuovoUtente.setEta(r.nextInt(42) + 18);
+        nuovoUtente.setSesso(r.nextInt(2));
+        nuovoUtente.setId(id);
+        for (int i = 0; i < mesi; i++) {
+            nuovoUtente.AggiungiReport(Report.generaReport(nuovoUtente,i));
+
+        }
+        return nuovoUtente;
+
+    }
+
+    public void AggiungiReport(Report report) {
+        this.listaReport.add(report);
+
     }
 
 }
