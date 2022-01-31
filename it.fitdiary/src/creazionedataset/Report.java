@@ -69,6 +69,19 @@ public class Report {
         return report;
     }
 
+    public static Report generaReport(Utente nuovoUtente, int mese, float peso) {
+        Report report = new Report();
+        Random r = new Random();
+        report.setMese(mese);
+        report.setPeso(peso);
+        int kcalDaAssumere = calcoloKcalDaAssumere(nuovoUtente, report.getPeso());
+        int kcalAssunte = (r.nextInt(4) > 2 ? kcalDaAssumere + ((kcalDaAssumere * r.nextInt(40)) / 100)
+                        : kcalDaAssumere - ((kcalDaAssumere * r.nextInt(40)) / 100));
+        report.setKcal(kcalAssunte);
+        report.setVariazionePesoStimato(calcolaPesoPerso(nuovoUtente, report.getKcal(), kcalDaAssumere));
+        return report;
+    }
+
     public static int calcoloKcalDaAssumere(Utente utente, float peso) {
 
         double metabolismoBasale = 0;

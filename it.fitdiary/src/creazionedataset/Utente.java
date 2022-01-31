@@ -63,9 +63,10 @@ public class Utente {
         nuovoUtente.setEta(r.nextInt(42) + 18);
         nuovoUtente.setSesso(r.nextInt(2));
         nuovoUtente.setId(id);
-        for (int i = 0; i < mesi; i++) {
-            nuovoUtente.AggiungiReport(Report.generaReport(nuovoUtente,i+1));
-
+        nuovoUtente.AggiungiReport(Report.generaReport(nuovoUtente,1));
+        for (int i = 1; i < mesi; i++) {
+            nuovoUtente.AggiungiReport(Report.generaReport(nuovoUtente,1+1,
+            (nuovoUtente.getListaReport().get(i-1).getPeso())-nuovoUtente.getListaReport().get(i-1).getVariazionePesoStimato()));
         }
         return nuovoUtente;
 
