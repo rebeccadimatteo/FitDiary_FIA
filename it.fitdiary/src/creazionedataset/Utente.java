@@ -65,7 +65,7 @@ public class Utente {
         nuovoUtente.setId(id);
         nuovoUtente.AggiungiReport(Report.generaReport(nuovoUtente,1));
         for (int i = 1; i < mesi; i++) {
-            nuovoUtente.AggiungiReport(Report.generaReport(nuovoUtente,1+1,
+            nuovoUtente.AggiungiReport(Report.generaReport(nuovoUtente,i+1,
             (nuovoUtente.getListaReport().get(i-1).getPeso())-nuovoUtente.getListaReport().get(i-1).getVariazionePesoStimato()));
         }
         return nuovoUtente;
