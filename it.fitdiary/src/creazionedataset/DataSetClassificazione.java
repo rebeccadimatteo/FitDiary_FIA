@@ -29,9 +29,9 @@ public class DataSetClassificazione {
 
     }
 
-    public static float range(float number,int range){
-        float newNumber=0;
-        newNumber=(float)Math.floor((number/range)*100)*0.25f;
+    public static int range(float number,int range){
+        int newNumber=0;
+        newNumber=(int)(13+(Math.floor((number/range)*100)));
         return newNumber;
-    } 
+    }
 }
