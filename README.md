@@ -1,7 +1,9 @@
 # FitDiary
 
-![FitDiary Logo](.github/FitDiaryLogo.png)
-
+![FitDiary Logo]
+<p align="center">
+<img src="logo/blackbg/SVG/Asset 2.svg">
+</p>
 > Progetto realizzato per il corso di Fondamenti di Intelligenza Artificiale - Università degli studi di Salerno 2021/22
 
 ## Partecipanti
