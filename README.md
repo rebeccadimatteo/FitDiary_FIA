@@ -5,6 +5,9 @@
 > Progetto realizzato per il corso di Fondamenti di Intelligenza Artificiale - Università degli studi di Salerno 2021/22
 
 ## Partecipanti
+
+| Team Members |
+|---|---|
 | [Daniele De Marco](https://github.com/dany98sa)|
 | [Ilaria De Sio](https://github.com/iladesio) |
 | [Rebecca Di Matteo](https://github.com/rebeccadimatteo) |
