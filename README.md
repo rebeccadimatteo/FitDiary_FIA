@@ -30,6 +30,9 @@ Lo scopo del progetto è quello di realizzare un agente intelligente in grado di
 
 * Classificazione
 
+## Come generare il file pmml
+
+Eseguire il file RegressioneNoFeatureScalingAndSelection.ipynb
 
 ## Contributors
 <a href="https://github.com/rebeccadimatteo/FitDiary_FIA/graphs/contributors">
