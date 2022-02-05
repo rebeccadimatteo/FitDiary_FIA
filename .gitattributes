@@ -1,5 +1,4 @@
 *.pmml filter=lfs diff=lfs merge=lfs -text
-*.csv linguist-generated
 *.txt linguist-generated
 *.ipynb filter=nbstripout
 *.ipynb diff=ipynb
